@@ -1,0 +1,16 @@
+<h1>DBZ personajes</h1>
+<hr>
+
+<!-- IMPORTANTES para la comunicación entre padre e hijo de @Input y @Output -->
+<!-- Eventos con parentesis () -->
+<!-- Llaves cuadradas son atributos -->
+
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDeleteCharacter)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
